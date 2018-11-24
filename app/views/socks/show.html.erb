@@ -1,4 +1,7 @@
 
+
+
+
 <p>
   <strong>Description:</strong>
   <%= @sock.description %>
@@ -23,3 +26,6 @@
   <strong>Material:</strong>
   <%= @sock.material %>
 </p>
+
+<%= link_to 'Edit', edit_sock_path(@sock) %> 
+<%= link_to 'Show all socks', socks_path %>

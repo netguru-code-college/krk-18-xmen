@@ -1,4 +1,7 @@
 
+
+<%= link_to 'New sock', new_sock_path %>
+
 <h1>List of socks</h1>
  
 <table>
@@ -17,7 +20,8 @@
       <td><%= sock.kind %></td>
       <td><%= sock.color %></td>
       <td><%= sock.material %></td>
-      <td><%= link_to 'Sock', sock_path(sock) %></td>
+      <td><%= link_to 'Show', sock_path(sock) %></td>
+      <td><%= link_to 'Edit', edit_sock_path(sock) %></td>
     </tr>
   <% end %>
 </table>

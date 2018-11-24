@@ -9,13 +9,19 @@ class SocksController < ApplicationController
     end
 
     def create
-        @sock = Sock.new(sock_params)
+        @sock = Sock.new(socks_params)
        
         @sock.save
         redirect_to @sock
       end
 
     def edit
+        @sock = Sock.find(params[:id])
+        if @sock.save
+            redirect_to @sock
+          else
+            render 'new'
+          end
     end
 
     def show
@@ -23,7 +29,14 @@ class SocksController < ApplicationController
     end
 
     def update
-    end
+  @sock = Sock.find(params[:id])
+ 
+  if @sock.update(socks_params)
+    redirect_to @sock
+  else
+    render 'edit'
+  end
+end
 
    
     def delete
