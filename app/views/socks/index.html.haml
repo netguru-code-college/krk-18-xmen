@@ -1,0 +1,16 @@
+%h1 List of socks
+%table
+  %tr
+    %th Description
+    %th Size
+    %th Kind
+    %th Color
+    %th Material
+  - @socks.each do |sock|
+    %tr
+      %td= sock.description
+      %td= sock.size
+      %td= sock.kind
+      %td= sock.color
+      %td= sock.material
+      %td= link_to 'Sock', sock_path(sock)
