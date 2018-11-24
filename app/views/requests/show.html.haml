@@ -1,7 +1,8 @@
-- if @request.photo.file.present?
-  = image_tag @request.photo_url
-= @request.description
-= @request.fabric
-= @request.kind
-= @request.color
-= @request.size
+.container
+  - if @request.photo.file.present?
+    = image_tag @request.photo_url
+  = @request.description
+  = @request.fabric
+  = @request.kind
+  = @request.color
+  = @request.size
