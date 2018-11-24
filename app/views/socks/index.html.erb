@@ -1,0 +1,23 @@
+
+<h1>List of socks</h1>
+ 
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Size</th>
+    <th>Kind</th>
+    <th>Color</th>
+    <th>Material</th>
+  </tr>
+ 
+  <% @socks.each do |sock| %>
+    <tr>
+      <td><%= sock.description %></td>
+      <td><%= sock.size %></td>
+      <td><%= sock.kind %></td>
+      <td><%= sock.color %></td>
+      <td><%= sock.material %></td>
+      <td><%= link_to 'Sock', sock_path(sock) %></td>
+    </tr>
+  <% end %>
+</table>
