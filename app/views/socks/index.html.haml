@@ -1,3 +1,4 @@
+= link_to 'New sock', new_sock_path
 %h1 List of socks
 %table
   %tr
@@ -13,4 +14,5 @@
       %td= sock.kind
       %td= sock.color
       %td= sock.material
-      %td= link_to 'Sock', sock_path(sock)
+      %td= link_to 'Show', sock_path(sock)
+      %td= link_to 'Edit', edit_sock_path(sock)
