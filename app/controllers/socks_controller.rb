@@ -5,6 +5,7 @@ class SocksController < ApplicationController
       end
 
     def new
+        @sock = Sock.new
     end
 
     def create

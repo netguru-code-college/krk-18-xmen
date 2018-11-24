@@ -13,6 +13,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
+gem 'simple_form'
+
 
 group :development, :test do
   gem 'pry'

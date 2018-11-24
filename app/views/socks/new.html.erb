@@ -1,6 +1,6 @@
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Create new sock") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Create") %>
+<%= simple_form_for @sock do |sock| %>
+  <%= sock.input :description %>
+  <%= sock.input :size %>
+  <%= sock.button :submit %>
 <% end %>
