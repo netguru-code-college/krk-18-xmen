@@ -1,6 +1,10 @@
 
-<%= simple_form_for @sock do |sock| %>
-  <%= sock.input :description %>
-  <%= sock.input :size %>
-  <%= sock.button :submit %>
+<%= simple_form_for @sock do |f| %>
+  <%= f.input :description %>
+  <%= f.input :size, input_html: { min: '14', max: '54', step: '1' }, placeholder: "Size", label: false %>
+  <%= f.input :kind, collection: Sock.kinds.keys %>
+  <%= f.input :color, collection: Sock.colors.keys %>
+  <%= f.input :material %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
 <% end %>
