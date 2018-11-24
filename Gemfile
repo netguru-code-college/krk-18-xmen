@@ -11,9 +11,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'devise'
 gem 'haml'
 gem 'haml-rails'
 gem 'simple_form'
+
 
 
 group :development, :test do
