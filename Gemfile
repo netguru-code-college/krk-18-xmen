@@ -12,6 +12,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
+gem 'haml'
+gem 'haml-rails'
+
 
 group :development, :test do
   gem 'pry'
