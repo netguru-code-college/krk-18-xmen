@@ -11,7 +11,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
+
 gem 'carrierwave', '~> 1.0'
+gem 'haml'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'pry'
