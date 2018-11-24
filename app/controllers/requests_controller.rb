@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+  before_action :find_request, only: [:show]
 
   def new
     @request = Request.new
@@ -10,6 +11,7 @@ class RequestsController < ApplicationController
 
   def create
     #requester_id jakoś musi byc zdefiniowany
+    #@request.requester_id = current_user
     @request = Request.new(request_params)
     if @request.save
       redirect_to @request
@@ -17,6 +19,10 @@ class RequestsController < ApplicationController
       render 'new'
     end
   end
+
+  def show
+  end
+
 
 
 
