@@ -1,0 +1,10 @@
+#form-container
+  .form-group
+    = simple_form_for @request do |f|
+      = f.input :photo, as: :file
+      = f.input :description
+      = f.input :fabric
+      = f.input :kind, collection: Request.kind_types.keys
+      = f.input :size, collection: 14..54, as: :range
+      = f.input :color, collection: Request.color_types.keys
+      = f.button :submit
