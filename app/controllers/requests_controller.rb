@@ -9,7 +9,7 @@ class RequestsController < ApplicationController
   end
 
   def mine
-    @requests =  current_user.request.page(params[:page])
+    @requests =  current_user.requests.page(params[:page])
   end
 
 
