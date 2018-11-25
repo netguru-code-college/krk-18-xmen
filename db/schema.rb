@@ -23,18 +23,6 @@ ActiveRecord::Schema.define(version: 2018_11_25_104207) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "socks", force: :cascade do |t|
-    t.text "description"
-    t.integer "size"
-    t.integer "kind"
-    t.integer "color"
-    t.string "material"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_socks_on_user_id"
-  end
-  
   create_table "requests", force: :cascade do |t|
     t.string "photo"
     t.text "description"
@@ -46,6 +34,18 @@ ActiveRecord::Schema.define(version: 2018_11_25_104207) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
+  end
+
+  create_table "socks", force: :cascade do |t|
+    t.text "description"
+    t.integer "size"
+    t.integer "kind"
+    t.integer "color"
+    t.string "material"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_socks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
