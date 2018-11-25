@@ -1,24 +1,33 @@
-# README
+# Socks O'Phone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app you never thought you need. But you really do.
+Brough to you by the best X-Men Team.
 
-Things you may want to cover:
+![Gif of Xmen](https://media.giphy.com/media/pfjUKa8qWUSLC/giphy.gif)
 
-* Ruby version
+## Tech stuff
 
-* System dependencies
+Tool | Version
+-|-
+**Ruby**          | 2.5.1
+**Ruby on Rails** | 5.2.1
+**HAML** | 5.0.4
 
-* Configuration
+## Starting server
 
-* Database creation
+Start your server using following command:
 
-* Database initialization
+    thin start --ssl --ssl-key-file ./.ssl/localhost.key --ssl-cert-file ./.ssl/localhost.crt
+    
+## X-Men Team
 
-* How to run the test suite
+- [@madking55](https://github.com/madking55)
+- [@czerwonka](https://github.com/czerwonka)
+- [@MarcinSzyc](https://github.com/MarcinSzyc)
+- [@kjuri](https://github.com/kjuri)
 
-* Services (job queues, cache servers, search engines, etc.)
+Netguru College: Ruby on Rails
 
-* Deployment instructions
+Weekend Edition
 
-* ...
+November 2018

@@ -17,6 +17,9 @@ gem 'devise'
 gem 'haml'
 gem 'haml-rails'
 gem 'kaminari'
+gem 'omniauth-facebook'
+gem 'thin'
+gem 'figaro'
 gem 'simple_form'
 
 group :development, :test do
