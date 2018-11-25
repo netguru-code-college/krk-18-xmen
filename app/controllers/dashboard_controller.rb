@@ -6,6 +6,9 @@ class DashboardController < ApplicationController
     @socks = Sock.all.order(:created_at).page(params[:page])
   end
 
-  def guest
+  def mine
+    @requests =  current_user.requests.page(params[:page])
+    @socks = current_user.socks.page(params[:page])
   end
+
 end
