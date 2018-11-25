@@ -1,14 +1,16 @@
 %nav.navbar.navbar-light.bg-faded
   .container
-    %a.navbar-brand{:href => root_path} Sox o'phone
+    %a.navbar-brand{ href: root_path }
+      = image_tag 'sock.png', class: 'navbrand-logo'
+      Socks O'phone
     %ul.nav.navbar-nav.pull-sm-right.hidden-xs-down
       - if user_signed_in?
         %li.nav-item
-          = link_to 'Logout', destroy_user_session_path, method: :delete
+          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-warning'
       - else
         %li.nav-item
-          = link_to 'Sign Up', new_user_registration_path
+          = link_to 'Sign Up', new_user_registration_path, class: 'btn btn-success'
         %li.nav-item
-          = link_to 'Sign in', new_user_session_path
+          = link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, class: 'btn btn-success'
         %li.nav-item
-          = link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path
+          = link_to 'Sign in', new_user_session_path, class: 'btn btn-success'

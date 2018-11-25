@@ -4,8 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
          :omniauthable, omniauth_providers: %i[facebook]
+  
+  has_many :socks
+  has_many :requests
 
-  	def self.from_omniauth(auth)
+  def self.from_omniauth(auth)
 	  where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 	  	user.uid = auth.uid
 	  	user.provider = auth.provider
@@ -20,18 +23,17 @@ class User < ApplicationRecord
 	end
 	
 	def self.new_with_session(params, session)
-    	super.tap do |user|
-	      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-	        user.email = data["email"] if user.email.blank?
-	      end
-    	end
-  	end
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+      end
+    end
+  end
 
-  	def apply_omniauth(auth)
+  def apply_omniauth(auth)
 	  update_attributes(
 	    provider: auth.provider,
 	    uid: auth.uid
 	  )
 	end
-
 end
