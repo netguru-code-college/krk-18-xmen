@@ -1,24 +1,14 @@
-# README
+# Socks O'Phone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app you never thought you need. But you really do.
+Brough to you by the best X-Men Team.
 
-Things you may want to cover:
+![Gif of Xmen](https://media.giphy.com/media/pfjUKa8qWUSLC/giphy.gif)
 
-* Ruby version
+## Tech stuff
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tool | Version
+-|-
+**Ruby**          | 2.5.1
+**Ruby on Rails** | 5.2.1
+**HAML** | 5.0.4
