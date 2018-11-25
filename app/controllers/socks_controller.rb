@@ -2,7 +2,6 @@ class SocksController < ApplicationController
 
     def index
       @socks = Sock.all.order(:created_at).page(params[:page])
-    
     end
 
     def show
@@ -25,7 +24,7 @@ class SocksController < ApplicationController
 
     def update
     @sock = Sock.find(params[:id])
-  
+
     if @sock.update(socks_params)
       redirect_to @sock
     else
