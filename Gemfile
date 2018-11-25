@@ -16,8 +16,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
-gem 'simple_form', '~> 4.1'
-
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry'
@@ -35,6 +34,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem "erb2haml"  
 end
 
 gem 'redactor-rails', github: 'glyph-fr/redactor-rails'
