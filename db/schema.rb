@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_104207) do
     t.integer "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

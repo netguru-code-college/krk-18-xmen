@@ -1,5 +1,7 @@
 class AddUserToRequests < ActiveRecord::Migration[5.2]
   def change
-    add_column :requests, :user_id, :integer
+    change_table :requests do |t|
+      t.belongs_to :user
+    end
   end
 end
