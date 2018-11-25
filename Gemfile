@@ -15,6 +15,7 @@ gem 'devise'
 gem 'haml'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'kaminari'
 
 
 

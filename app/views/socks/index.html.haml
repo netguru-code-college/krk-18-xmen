@@ -17,3 +17,5 @@
       %td= link_to 'Show', sock_path(sock), class: 'btn btn-info'
       %td= link_to 'Edit', edit_sock_path(sock), class: 'btn btn-warning'
       %td= link_to 'Delete', sock_path(sock), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+
+  = paginate @socks 

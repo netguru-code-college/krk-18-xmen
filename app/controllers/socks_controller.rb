@@ -1,7 +1,8 @@
 class SocksController < ApplicationController
 
     def index
-        @socks = Sock.all
+      @socks = Sock.all.order(:created_at).page(params[:page])
+    
     end
 
     def show
