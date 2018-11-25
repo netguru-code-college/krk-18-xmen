@@ -14,6 +14,9 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
+gem 'omniauth-facebook'
+gem 'thin'
+gem 'figaro'
 
 
 group :development, :test do
