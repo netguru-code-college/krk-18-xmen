@@ -13,7 +13,7 @@ class SocksController < ApplicationController
     end
 
     def create
-        @sock = Sock.new(socks_params)
+        @sock = current_user.socks.build(socks_params)
         @sock.save
         redirect_to @sock
     end

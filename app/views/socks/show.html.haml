@@ -13,6 +13,9 @@
 %p
   %strong Material:
   = @sock.material
+%p
+  %strong User:
+  = @sock.user.email
 
 = link_to 'Edit', edit_sock_path(@sock), class: 'btn btn-warning'
 = link_to 'Show all socks', socks_path, class: 'btn btn-primary' 
