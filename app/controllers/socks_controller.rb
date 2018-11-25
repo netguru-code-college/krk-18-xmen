@@ -1,7 +1,8 @@
 class SocksController < ApplicationController
 
     def index
-        @socks = Sock.all
+      @socks = Sock.all.order(:created_at).page(params[:page])
+    
     end
 
     def show
@@ -32,6 +33,10 @@ class SocksController < ApplicationController
       end
     end
 
+    def mine
+      @socks = current_user.socks.page(params[:page])
+    end
+
     def destroy
       @sock = Sock.find(params[:id])
       @sock.destroy
@@ -41,6 +46,6 @@ class SocksController < ApplicationController
 
     private
       def socks_params
-        params.require(:sock).permit(:description, :size, :kind, :color, :material)
+        params.require(:sock).permit(:description, :size, :kind, :color, :material, :user_id)
       end
 end

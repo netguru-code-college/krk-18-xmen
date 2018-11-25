@@ -21,6 +21,7 @@ gem 'omniauth-facebook'
 gem 'thin'
 gem 'figaro'
 gem 'simple_form'
+gem 'kaminari'
 
 group :development, :test do
   gem 'pry'
