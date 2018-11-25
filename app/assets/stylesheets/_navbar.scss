@@ -1,48 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 .navbar {
-    border-radius: 0;
-    margin-bottom: 20px;
-    background-color: #BDBDBF;
-    .navbar-brand {
-        font-weight: bolder;
-        .light {
-            font-weight: 300;
-        }
+  background-color: #BDBDBF;
+  border-radius: 0;
+  margin-bottom: 20px;
+
+  .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+
+    .navbrand-logo {
+      height: 30px;
+      position: relative;
+      top: -5px;
     }
-    .navbar-toggler {
-        outline: none;
-    }
-    .navbar-nav {
-        display: inline-block;
-    }
-    .navbar-nav>li {
-        display: inline-block;
-        text-align: right
-    }   
+  }
+
+  .navbar-toggler {
+    outline: none;
+  }
+
+  .navbar-nav {
+    display: inline-block;
+  }
+
+  .navbar-nav>li {
+    display: inline-block;
+    text-align: right
+  }   
 }
 
 .collapse-bg {
-    padding: 0 !important;
-    .card {
-        margin-bottom: 0;
-        border-radius: 0;
-        border: none;
-    }
+  padding: 0 !important;
+
+  .card {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+  }
 }
 
 .collapse-bg .card .list-group-item {
-    padding: 0;
-    border-radius: 0 !important;
-    border-color: black;
-    a {
-        background-color: #1a1a1a;
-        color: #bdc3c7;
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        &:active {
-            color: white;
-            border-bottom: none;
-        }
+  padding: 0;
+  border-radius: 0 !important;
+  border-color: black;
+
+  a {
+    background-color: #1a1a1a;
+    color: #bdc3c7;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    &:active {
+      color: white;
+      border-bottom: none;
     }
+  }
 }
 

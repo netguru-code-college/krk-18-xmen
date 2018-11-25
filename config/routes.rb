@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :socks
-	root 'dashboard#index'
-  devise_for :users
+	devise_for :users
+
+	authenticated :user do
+		root 'dashboard#index'
+	end
+
+	root 'dashboard#guest'
 end
