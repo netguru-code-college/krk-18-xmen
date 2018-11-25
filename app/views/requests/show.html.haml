@@ -6,6 +6,8 @@
           = image_tag(@request.photo_url, class: 'article-picture')
     .col-md-4
       %p
+      = @request.user&.email
+      %p
       = @request.description
       %p
       = @request.fabric

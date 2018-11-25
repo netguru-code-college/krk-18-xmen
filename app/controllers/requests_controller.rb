@@ -9,14 +9,9 @@ class RequestsController < ApplicationController
   end
 
   def create
-    #requester_id jakoś musi byc zdefiniowany
-    #@request.requester_id = current_user
-    @request = Request.new(request_params)
-    if @request.save
-      redirect_to @request
-    else
-      render 'new'
-    end
+    @request = current_user.requests.build(request_params)
+    @request.save
+    redirect_to @request
   end
 
   def edit
@@ -45,6 +40,6 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:photo, :description, :fabric, :kind, :size, :color, :requester_id)
+    params.require(:request).permit(:photo, :description, :fabric, :kind, :size, :color, :user_id)
   end
 end
