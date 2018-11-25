@@ -1,3 +1,5 @@
+%h1 Create new sock 
+
 = simple_form_for @sock do |f|
   = f.input :description
   = f.input :size, input_html: { min: '14', max: '54', step: '1' }, placeholder: "Size", label: false

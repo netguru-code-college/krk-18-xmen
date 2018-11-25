@@ -4,6 +4,10 @@ class SocksController < ApplicationController
         @socks = Sock.all
       end
 
+    def show
+        @sock = Sock.find(params[:id])
+    end
+
     def new
         @sock = Sock.new
     end
@@ -17,16 +21,9 @@ class SocksController < ApplicationController
 
     def edit
         @sock = Sock.find(params[:id])
-        if @sock.save
-            redirect_to @sock
-          else
-            render 'new'
-          end
+     
     end
 
-    def show
-        @sock = Sock.find(params[:id])
-    end
 
     def update
   @sock = Sock.find(params[:id])
@@ -38,9 +35,14 @@ class SocksController < ApplicationController
   end
 end
 
-   
-    def delete
-    end
+
+def destroy
+    @sock = Sock.find(params[:id])
+    @sock.destroy
+   flash[:success] = "Sock deleted"
+    redirect_to socks_path
+  end
+
 
    
     private

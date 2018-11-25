@@ -1,6 +1,6 @@
-= link_to 'New sock', new_sock_path
+= link_to 'New sock', new_sock_path, class: 'btn btn-primary'
 %h1 List of socks
-%table
+%table.table
   %tr
     %th Description
     %th Size
@@ -14,5 +14,6 @@
       %td= sock.kind
       %td= sock.color
       %td= sock.material
-      %td= link_to 'Show', sock_path(sock)
-      %td= link_to 'Edit', edit_sock_path(sock)
+      %td= link_to 'Show', sock_path(sock), class: 'btn btn-info'
+      %td= link_to 'Edit', edit_sock_path(sock), class: 'btn btn-warning'
+      %td= link_to 'Delete', sock_path(sock), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

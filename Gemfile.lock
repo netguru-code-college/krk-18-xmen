@@ -238,8 +238,8 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap
   byebug
-  erb2haml
   devise
+  erb2haml
   factory_bot
   haml
   haml-rails
