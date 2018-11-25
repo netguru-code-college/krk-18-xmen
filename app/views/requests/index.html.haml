@@ -1,0 +1,15 @@
+.container
+  %h1 All requests
+  = link_to 'New', new_request_path, class: ' btn btn-primary'
+  %table
+    %tbody
+    - @requests.each do |request|
+      %tr
+        %td
+          - if request.photo.file.present?
+            = image_tag(request.photo.url, class: 'article-picture-mini')
+        %td= request.user&.email
+        %td= request.description
+        %td= link_to 'Show', request_path(request)
+        %td= link_to 'Edit', edit_request_path(request)
+        %td= link_to 'Delete', request_path(request), method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,0 +1,24 @@
+.container
+  .row
+    .col-md-8
+      - if @request.photo.file.present?
+        %p
+          = image_tag(@request.photo_url, class: 'article-picture')
+    .col-md-4
+      %p
+      = @request.user&.email
+      %p
+      = @request.description
+      %p
+      = @request.fabric
+      %p
+      = @request.kind
+      %p
+      = @request.color
+      %p
+      = @request.size
+
+  .row
+    = link_to 'Back', requests_path, class: 'btn btn-primary'
+    = link_to 'Edit', edit_request_path(@request),  class: 'btn btn-primary'
+    = link_to 'Delete', request_path(@request), method: :delete, class: 'btn btn-primary'

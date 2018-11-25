@@ -11,13 +11,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
+
+gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
+gem 'omniauth-facebook'
+gem 'thin'
+gem 'figaro'
 gem 'simple_form'
 gem 'kaminari'
-
-
 
 group :development, :test do
   gem 'pry'
@@ -37,3 +40,5 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem "erb2haml"  
 end
+
+gem 'redactor-rails', github: 'glyph-fr/redactor-rails'
