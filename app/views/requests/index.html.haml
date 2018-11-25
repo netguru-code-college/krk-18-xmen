@@ -16,7 +16,7 @@
       %tr
         %td
           - if request.photo.file.present?
-            = image_tag(request.photo.url, class: 'article-picture-mini')
+            = image_tag(request.photo.url, class: 'picture-mini')
         %td= request.user&.email
         %td= request.description
         %td= request.size

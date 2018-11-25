@@ -16,6 +16,8 @@
             - @socks.each do |sock|
               %tr
                 %td
+                  - if sock.photo.file.present?
+                    = image_tag(sock.photo.url, class: 'picture-mini')                
                 %td= sock.description
                 %td= sock.size
                 %td= link_to 'Show', sock_path(sock), class: 'btn btn-info'
@@ -39,7 +41,7 @@
                 %tr
                   %td
                     - if request.photo.file.present?
-                      = image_tag(request.photo.url, class: 'article-picture-mini')
+                      = image_tag(request.photo.url, class: 'picture-mini')
                   %td= request.description
                   %td= request.size
                   %td= link_to 'Show', request_path(request), class: 'btn btn-info'

@@ -1,21 +1,28 @@
-%p
-  %strong Description:
-  = @sock.description
-%p
-  %strong Size:
-  = @sock.size
-%p
-  %strong Kind:
-  = @sock.kind
-%p
-  %strong Color:
-  = @sock.color
-%p
-  %strong Material:
-  = @sock.material
-%p
-  %strong User:
-  = @sock.user.email
-
-= link_to 'Edit', edit_sock_path(@sock), class: 'btn btn-warning'
-= link_to 'Show all socks', socks_path, class: 'btn btn-primary' 
+.container
+  .row
+    .col-md-8
+      - if @sock.photo.file.present?
+        %p
+          = image_tag(@sock.photo_url, class: 'picture')
+    .col-md-4
+      %p
+        %strong Description:
+        = @sock.description
+      %p
+        %strong Size:
+        = @sock.size
+      %p
+        %strong Kind:
+        = @sock.kind
+      %p
+        %strong Color:
+        = @sock.color
+      %p
+        %strong Material:
+        = @sock.material
+      %p
+        %strong User:
+        = @sock.user.email
+  .row
+    = link_to 'Edit', edit_sock_path(@sock), class: 'btn btn-warning'
+    = link_to 'Show all socks', socks_path, class: 'btn btn-primary'

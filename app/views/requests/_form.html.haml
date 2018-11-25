@@ -3,9 +3,13 @@
   = simple_form_for @request do |f|
     .form-control-file
     = f.input :photo, as: :file, placeholder: "Add photo"
+    .form-control
     = f.input :description, placeholder: "Describe socks", label: false
     = f.input :fabric, placeholder: "Fabric", label: false
     = f.input :kind, collection: Request.kinds.keys, include_blank: "Select kind", label: false
     = f.input :color, collection: Request.colors.keys, include_blank: "Select color", label: false
     = f.input :size, input_html: { min: '14', max: '54', step: '1' }, placeholder: "Size", label: false
     = f.button :submit
+    = f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary"
+
+  = link_to 'Show all request', requests_path

@@ -3,7 +3,7 @@
     .col-md-8
       - if @request.photo.file.present?
         %p
-          = image_tag(@request.photo_url, class: 'article-picture')
+          = image_tag(@request.photo_url, class: 'picture')
     .col-md-4
       %p
       = @request.user&.email
