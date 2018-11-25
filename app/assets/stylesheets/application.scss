@@ -1,3 +1,18 @@
 @import "bootstrap";
 @import "navbar";
 @import "carousel";
+
+#form-container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.article-picture {
+  width: 100%;
+}
+
+.article-picture-mini {
+  width: 100px;
+  height: 100px;
+}
