@@ -5,8 +5,13 @@ class RequestsController < ApplicationController
   end
 
   def index
-    @requests = Request.all
+    @requests = Request.all.page(params[:page])
   end
+
+  def mine
+    @requests =  current_user.requests.page(params[:page])
+  end
+
 
   def create
     @request = current_user.requests.build(request_params)
