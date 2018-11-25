@@ -4,5 +4,6 @@ class Request < ApplicationRecord
   enum color: [:blue, :green, :black, :white, :yellow, :red, :other]
   mount_uploader :photo, PhotoUploader
 
+  paginates_per 1
   belongs_to :user
 end
