@@ -9,8 +9,6 @@
           - if request.photo.file.present?
             = image_tag(request.photo.url, class: 'article-picture-mini')
         %td= request.description
-        %td= request.size
-        %td= request.color
         %td= link_to 'Show', request_path(request)
         %td= link_to 'Edit', edit_request_path(request)
         %td= link_to 'Delete', request_path(request), method: :delete, data: { confirm: 'Are you sure?' }
