@@ -1,5 +1,4 @@
 class RequestsController < ApplicationController
-  before_action :find_request, only: [:show]
 
   def new
     @request = Request.new
@@ -20,19 +19,32 @@ class RequestsController < ApplicationController
     end
   end
 
-  def show
+  def edit
+    @request = Request.find(params[:id])
   end
 
+  def update
+    @request = Request.find(params[:id])
+    if @request.save
+      redirect_to @request
+    else
+      render 'edit'
+    end
+  end
 
+  def show
+    @request = Request.find(params[:id])
+  end
 
+  def destroy
+    @request = Request.find(params[:id])
+    @request.destroy
+    redirect_to requests_path
+  end
 
   private
 
   def request_params
     params.require(:request).permit(:photo, :description, :fabric, :kind, :size, :color, :requester_id)
-  end
-
-  def find_request
-      @request = Request.find(params[:id])
   end
 end
