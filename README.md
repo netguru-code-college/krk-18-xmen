@@ -13,11 +13,19 @@ Tool | Version
 **Ruby on Rails** | 5.2.1
 **HAML** | 5.0.4
 
-## Starting server
+## Development
+
+### Generating SSL certs
+
+Generate your local SSL certificates using following command:
+    
+    openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -keyout localhost.key -out localhost.crt
+
+### Starting server
 
 Start your server using following command:
 
-    thin start --ssl --ssl-key-file ./.ssl/localhost.key --ssl-cert-file ./.ssl/localhost.crt
+    thin start --ssl --ssl-key-file localhost.key --ssl-cert-file localhost.crt
     
 ## X-Men Team
 
