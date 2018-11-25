@@ -16,6 +16,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
+gem 'omniauth-facebook'
+gem 'thin'
+gem 'figaro'
 gem 'simple_form'
 
 group :development, :test do
